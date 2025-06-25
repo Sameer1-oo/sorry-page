@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>I'm Sorry 💔</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      height: 100vh;
+      background: linear-gradient(to right, #ff758c, #ff7eb3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      color: white;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      animation: popUp 1s ease-in-out forwards;
+    }
+
+    p {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      max-width: 600px;
+      animation: fadeIn 2s ease-in-out forwards;
+    }
+
+    .heart {
+      font-size: 50px;
+      margin-top: 30px;
+      color: red;
+      animation: heartbeat 1s infinite;
+    }
+
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+    }
+
+    @keyframes popUp {
+      0% { transform: scale(0); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .btn {
+      margin-top: 40px;
+      padding: 12px 25px;
+      background: white;
+      color: #ff5f7e;
+      border: none;
+      font-size: 1rem;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #ffe9ec;
+      transform: scale(1.05);
+    }
+
+    .bg-hearts {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    .bg-hearts span {
+      position: absolute;
+      display: block;
+      width: 20px;
+      height: 20px;
+      background: rgba(255, 255, 255, 0.8);
+      margin: 0;
+      animation: floatHearts 10s linear infinite;
+      border-radius: 50%;
+      top: 100%;
+    }
+
+    @keyframes floatHearts {
+      0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(-1000px) rotate(360deg); opacity: 0; }
+    }
+
+  </style>
+</head>
+<body>
+  <h1>I'm Really Sorry 😔</h1>
+  <p>Mujhse galti ho gayi... bilkul bhi intention nahi tha.  
+    Jo bhi hua, main dil se maafi chahta hoon.  
+    Please ek mauka aur de do, aage se dhyan rakhunga. 🙏</p>
+  <div class="heart">❤️</div>
+  <button class="btn" onclick="alert('Shukriya... 🙏')">Maaf Kiya? 😢</button>
+
+  <div class="bg-hearts">
+    <span style="left:10%; animation-delay: 0s;"></span>
+    <span style="left:20%; animation-delay: 2s;"></span>
+    <span style="left:30%; animation-delay: 4s;"></span>
+    <span style="left:40%; animation-delay: 1s;"></span>
+    <span style="left:50%; animation-delay: 3s;"></span>
+    <span style="left:60%; animation-delay: 2s;"></span>
+    <span style="left:70%; animation-delay: 0s;"></span>
+    <span style="left:80%; animation-delay: 4s;"></span>
+    <span style="left:90%; animation-delay: 1s;"></span>
+  </div>
+</body>
+</html>
