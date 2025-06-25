@@ -1,2 +1,0 @@
-# sorry-page
-sorry page
